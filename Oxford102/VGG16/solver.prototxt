@@ -1,0 +1,14 @@
+net: "train_val.prototxt"
+test_iter: 51        # enough iterations to cover the 1020 images with a batch size of 20
+test_interval: 500  
+base_lr: 0.001        # lr for fine-tuning should be lower than when starting from scratch
+lr_policy: "step"
+gamma: 0.1
+stepsize: 20000       # stepsize should also be lower, as we're closer to being done
+display: 50
+max_iter: 50000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "snapshot"
+solver_mode: GPU
