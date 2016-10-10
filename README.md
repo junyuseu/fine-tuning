@@ -38,4 +38,7 @@ cd VGG16
 caffe train -solver solver.prototxt -weights pretrained-weights.caffemodel -gpu 0
 ```
 
+## ResNet-50
+If you want to use that:
+you need running 'convert_imageset.exe' script to get lmdb and downloading the model of resnet-50
 
