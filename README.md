@@ -40,5 +40,5 @@ caffe train -solver solver.prototxt -weights pretrained-weights.caffemodel -gpu 
 
 ## ResNet-50
 If you want to use that:
-you need running 'convert_imageset.exe' script to get lmdb and downloading the model of resnet-50
+you need running `convert_imageset.exe` script to get lmdb and downloading the model of resnet-50
 
