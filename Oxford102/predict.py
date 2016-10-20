@@ -1,14 +1,12 @@
 #!usr/bin/env python
-'''
-read a image of flowers and predict which kind of flowers it is.
-'''
 import caffe
 import argparse
 from class_labels import labels
 import numpy as np
 import matplotlib.pyplot as plt
 
-#main function:parse the arument and predict
+
+# Read a image of flowers and predict which kind of flowers it is.
 def main():
     parse=argparse.ArgumentParser()
     parse.add_argument(
