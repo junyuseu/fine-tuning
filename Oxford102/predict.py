@@ -6,8 +6,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# Read a image of flowers and predict which kind of flowers it is.
+
 def main():
+    """ Read a image of flowers and predict which kind of flowers it is. """
     parse=argparse.ArgumentParser()
     parse.add_argument(
         "input_file",
