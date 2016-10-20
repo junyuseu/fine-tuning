@@ -8,6 +8,7 @@ from class_labels import labels
 import numpy as np
 import matplotlib.pyplot as plt
 
+#main function:parse the arument and predict
 def main():
     parse=argparse.ArgumentParser()
     parse.add_argument(
@@ -39,9 +40,9 @@ def main():
         imagenet_mean = np.load(args.mean_file)[:, 14:14 + 227, 14:14 + 227]
     net=caffe.Classifier(
         args.model,args.weights,
-        mean=imagenet_mean,
-        channel_swap=(2,1,0),
-        raw_scale=255,
+        mean=imagenet_mean,# subtract the dataset-mean value in each channel
+        channel_swap=(2,1,0),# swap channels from RGB to BGR
+        raw_scale=255,# rescale from [0, 1] to [0, 255]
         image_dims=(256,256)
     )
     result=net.predict([image])
