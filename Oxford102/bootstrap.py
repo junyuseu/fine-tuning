@@ -49,7 +49,7 @@ cwd = os.path.dirname(os.path.realpath(__file__))
 def write_set_file(fout, labels):
     with open(fout, 'w+') as f:
         for label in labels:
-            f.write('%s/%s %s\n' % (cwd, label[0], label[1]))
+            f.write('{0!s}/{1!s} {2!s}\n'.format(cwd, label[0], label[1]))
 
 # Images are ordered by species, so shuffle them
 np.random.seed(777)
