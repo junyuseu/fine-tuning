@@ -66,9 +66,9 @@ if not os.path.exists('CaffeNet/pretrained-weights.caffemodel'):
     download_file('http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel', 
                   'CaffeNet/pretrained-weights.caffemodel')
     
-if not os.path.exists('VGG_16/pretrained-weights.caffemodel'):
-    print('Downloading VGG_16 pretrained weights...')
+if not os.path.exists('VGG16/pretrained-weights.caffemodel'):
+    print('Downloading VGG16 pretrained weights...')
     download_file('http://www.robots.ox.ac.uk/~vgg/software/very_deep/caffe/VGG_ILSVRC_16_layers.caffemodel',
-                  'VGG_16/pretrained-weights.caffemodel')
+                  'VGG16/pretrained-weights.caffemodel')
     
     

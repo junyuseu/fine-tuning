@@ -1,6 +1,6 @@
 # Notice
 Oxford102 is forked from [caffe-Oxford102](https://github.com/jimgoo/caffe-oxford102).
-I modified some code and trained with VGG16 rather than VGG_S.I got better results than the original version
+I modified some code and trained with VGG16 rather than VGG_S.I got better results than the original version.
 
 # caffe-oxford102
 
@@ -41,4 +41,14 @@ caffe train -solver solver.prototxt -weights pretrained-weights.caffemodel -gpu 
 ## ResNet-50
 If you want to use that:
 you need running `convert_imageset.exe` script to get lmdb and downloading the model of resnet-50
+
+# Results
+Model|Valid Acc|Test Acc
+:---:|:---:|:---:
+CaffeNet|83.90%|81.43%
+VGG16|89.12%|86.31%
+ResNet-50|91.37%|88.08%
+
+#Blog address
+ <br/>[zhihu](https://zhuanlan.zhihu.com/p/22624331)
 
