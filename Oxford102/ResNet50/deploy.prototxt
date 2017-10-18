@@ -1,4 +1,4 @@
-name: "ResNet-50"
+name: "Oxford102-resnet50"
 input: "data"
 input_dim: 1
 input_dim: 3
@@ -2303,16 +2303,16 @@ layer {
 
 layer {
 	bottom: "pool5"
-	top: "fc1000"
-	name: "fc1000"
+	top: "fc_oxford102"
+	name: "fc_oxford102"
 	type: "InnerProduct"
 	inner_product_param {
-		num_output: 1000
+		num_output: 102
 	}
 }
 
 layer {
-	bottom: "fc1000"
+	bottom: "fc_oxford102"
 	top: "prob"
 	name: "prob"
 	type: "Softmax"
